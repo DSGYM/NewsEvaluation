@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", sans-serif;
+}
+
+ul {
+  list-style-type: none;
+}
+
+input {
+  display: block;
+  padding: 10px 5px;
+  margin: 20px 0px;
+  width: 100%;
+}
+
+input[type="submit"] {
+  cursor: pointer;
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>News Evaluation App</title>
+  </head>
+
+  <body>
+    <nav id="nav">
+      <h2>News Evaluation Project</h2>
+    </nav>
+
+    <section id="input">
+      <div class="container">
+        <form onsubmit="return Client.handleSubmit(event)">
+          <label for="url">Provide the URL you want to analyze</label>
+          <input id="url" type="text" name="input" value="" placeholder="URL" />
+          <input
+            type="submit"
+            name=""
+            value="Analyze text"
+            onclick="return Client.handleSubmit(event)"
+            onsubmit="return Client.handleSubmit(event)"
+          />
+        </form>
+      </div>
+    </section>
+
+    <section id="result">
+      <div class="container">
+        <p id="error"></p>
+        <strong>Results:</strong>
+        <ul>
+          <li>
+            <h4>Text Polarity:</h4>
+            <p id="polarity"></p>
+            <h4>Confidence:</h4>
+            <p id="polarity_confidence"></p>
+          </li>
+          <li>
+            <h4>Text Subjectivity:</h4>
+            <p id="subjectivity"></p>
+            <h4>Confidence:</h4>
+            <p id="subjectivity_confidence"></p>
+          </li>
+          <li>
+            <h4>Text:</h4>
+            <p id="text"></p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <footer id="footer">
+      <p>&copy; Markus Lang 2020</p>
+    </footer>
+
+    <script>
+      // Check for service worker support
+      if ("serviceWorker" in navigator) {
+        // Use the window load event to keep the page load performant
+        window.addEventListener("load", () => {
+          navigator.serviceWorker.register("/service-worker.js");
+        });
+      }
+    </script>
+  </body>
+</html>

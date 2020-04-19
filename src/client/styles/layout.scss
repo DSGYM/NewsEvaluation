@@ -1,0 +1,64 @@
+$bg-color: #051440;
+$main-bg-color: #95aae2;
+$primary-color: #ffffff;
+
+body {
+  height: 100vh;
+  min-height: 700px;
+  background-color: $main-bg-color;
+}
+
+#footer,
+#nav {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 0;
+  height: 70px;
+  width: 100%;
+  background: $bg-color;
+  color: $primary-color;
+  font-size: 24px;
+}
+
+#nav {
+  top: 0;
+}
+
+#footer {
+  bottom: 0;
+}
+
+// Main Layout
+
+#input,
+#result {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 250px;
+}
+
+.container {
+  width: 70%;
+  max-width: 1000px;
+  background-color: $bg-color;
+  color: $primary-color;
+  padding: 20px 30px;
+  line-height: 40px;
+  border: 1px solid black;
+  border-radius: 5px;
+
+  &:hover {
+    border: 1px solid white;
+  }
+}
+
+#error {
+  background: red;
+  border: 1px solid $primary-color;
+  color: $primary-color;
+  padding: 10px 5px;
+  visibility: hidden;
+}
